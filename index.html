@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+   
+}
+body{
+  
+background:#222;
+background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+/* background-repeat: no-repeat; */
+}
+.card{
+    width:90%;
+    max-width: 470px;
+    /* height:100vh; */
+    background-image: linear-gradient(to left bottom, #71ffde, #28f0f6, #00deff, #4ac9ff, #82b1ff, #86b0ff, #8aafff, #8eaeff, #68c4ff, #5cd5fc, #73e3ed, #9aeedf);
+    background-repeat: no-repeat;
+    color:#fff;
+    margin:auto;
+    border-radius: 20px;
+    padding:273px 35px;
+    text-align: center;
+}
+.search{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.search input{
+    border:0;
+    outline:0;
+    background-color: #ebfffc;
+    color:#555;
+    padding:10px 25px;
+    height:60px;
+    border-radius:30px;
+    flex:1;
+    margin-right: 16px;
+    font-size: 18px;
+    transform: translateX(-17px);
+    
+}
+.search button{
+    border:0;
+    outline:0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    transform: translateX(-22px);
+}
+.search button img{
+  width:16px;
+}
+.weather-icon{
+  width:170px;
+  margin-top:30px;
+
+}
+.weather .degree{
+    font-size:30px;
+    font-weight: 500;
+    color:black;
+    display: flex;
+    width: 91px;
+    margin: auto;
+
+}
+
+#temp{
+ 
+}
+.weather .degree span{
+    text-align: center;
+    font-size: 20pxpx;
+}
+.weather h2{
+    font-size:60px;
+    font-weight: 400;
+    margin-top: -10px;
+    color:black;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+    margin-top: 50px ;
+    /* background-color:rgb(222, 111, 111); */
+    border-radius: 23px;
+    background-image: linear-gradient(to left, #af39cd, #6579fd, #00a2ff, #00c0ff, #00d9f2, #00def5, #00e3f9, #00e8fc, #14dbff, #6dc9ff, #adb3ff, #dd9aee);
+    color: #222;
+
+}
+.col{
+    width:200px;
+    height:50px;
+   
+}
+.align{
+    display: flex;
+    width:27px;
+    margin:auto;
+}
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px 0 0 5px; */
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9af5f7;
+}
+
+
+    </style>
+  
+</head>
+<body>
+  <div class="card">
+      <div class="search">
+         <input type="text" placeholder="enter city name" id="cityInput" > 
+         <button id="submit"><img src="images/search.png" alt=""></button>
+      </div>
+      <div class="weather">
+           <img src="images/snow.png" class="weather-icon">
+           <div  class="degree">
+              <span id="temp">℃  </span>
+            </div>
+            <h2 class="city" id="cityName">City</h2>
+           <div class="details">
+                 <div class="col">
+            <div>
+               <div class="align">
+                <p id="humidity">0</p>
+                <span>%</span>
+               </div>
+               <p style="font-size: 15px;">Humidity</p>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+              <div class="align">
+                <p id="wind_speed">0</p>
+                <span>Km/h</span>
+              </div>
+                <p style="font-size: 15px;">Wind speed</p>
+            </div>
+        </div>
+         <div class="col">
+            <div>
+              <div class="align">
+                <p id="cloud_pct">0</p>
+                <span>%</span>
+              </div>
+                <p style="font-size: 15px;">cloud</p>
+            </div>
+        </div>
+       </div>
+          <div class="details">
+      
+        <div class="col">
+            <div>
+                <div class="align">
+                  <p id="feels_like">0</p>
+                  <span>℃</span>
+                </div>
+                <p style="font-size: 15px;">feels like</p>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <div class="align">
+                  <p id="min_temp">0</p>
+                  <span>℃</span>
+                </div>
+                <p style="font-size: 15px;">min temp</p>
+            </div>
+        </div>
+        <div class="col">
+            <div>
+                <div class="align">
+                <p id="max_temp">0</p>
+                <span>℃</span>
+                </div>
+                <p style="font-size: 15px;">max temp</p>
+            </div>
+        </div>
+      </div>
+   </div>
+ </div>  
+</body>
+<script src="script.js"></script>
+</html>
